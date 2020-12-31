@@ -12,7 +12,21 @@ class cartItemsBLoC {
     ],
     'cart items': []
   };
+  void addToCart(item) {
+    allItems['shop items'].remove(item);
+    allItems['cart items'].add(item);
+    cartStreamController.sink.add(allItems);
+  }
+
+  void removeFromCart(item) {
+    allItems['cart items'].remove(item);
+    allItems['shop items'].add(item);
+    cartStreamController.sink.add(allItems);
+  }
+
   void dispose() {
-    cartStreamController.close();
+    cartStreamController.close(); // close our StreamController
   }
 }
+
+final bloc = cartItemsBLoC();
