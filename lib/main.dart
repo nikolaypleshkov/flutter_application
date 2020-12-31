@@ -20,17 +20,16 @@ class MainApp extends StatelessWidget {
       800: Color.fromRGBO(255, 144, 0, .9),
       900: Color.fromRGBO(255, 144, 0, 1),
     };
-    // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: MaterialColor(0xFFFF7000, color),
+      ),
       initialRoute: '/',
       routes: {
         '/': (BuildContext context) => ShopItems(),
         '/checkout': (BuildContext context) => Checkout()
       },
-      theme: ThemeData(
-        brightness: Brightness.dark,
-      ),
     );
   }
 }
