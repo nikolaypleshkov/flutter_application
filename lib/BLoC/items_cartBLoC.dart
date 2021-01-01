@@ -25,7 +25,7 @@ class cartItemsBLoC {
   }
 
   void dispose() {
-    cartStreamController.close(); // close our StreamController
+    cartStreamController.close();
   }
 }
 
