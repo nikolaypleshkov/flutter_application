@@ -5,7 +5,7 @@ class ShopItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Shopping Cart'),
+        title: Text('Shopping Cart App'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.shopping_cart),
@@ -34,18 +34,19 @@ class ShopItemsWidget extends StatelessWidget {
 
 Widget shopItemsListBuilder(snapshot) {
   return ListView.builder(
-    itemCount: snapshot.data['shop items'].lenght,
+    itemCount: snapshot.data["shop items"].length,
     itemBuilder: (BuildContext context, i) {
-      final shopList = snapshot.data['shop items'];
+      final shopList = snapshot.data["shop items"];
       return ListTile(
         title: Text(shopList[i]['name']),
-        subtitle: Text('\$${shopList[i]['price']}'),
+        subtitle: Text("\$${shopList[i]['price']}"),
         trailing: IconButton(
           icon: Icon(Icons.add_shopping_cart),
           onPressed: () {
             bloc.addToCart(shopList[i]);
           },
         ),
+        onTap: () {},
       );
     },
   );
