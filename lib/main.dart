@@ -20,9 +20,6 @@ class MyApp extends StatelessWidget {
           child: PageViewer(),
         ),
       ),
-      theme: ThemeData(
-        brightness: Brightness.dark,
-      ),
     );
   }
 }
