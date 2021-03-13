@@ -67,6 +67,8 @@ class _MenuDashBoardState extends State<MenuDashBoard> {
       left: isMenuClosed ? 0 : 0.6 * screenWidth,
       right: isMenuClosed ? 0 : -0.4 * screenWidth,
       child: Material(
+        animationDuration: duration,
+        borderRadius: BorderRadius.all(Radius.circular(40)),
         elevation: 8,
         color: backgroudnColor,
         child: Container(
