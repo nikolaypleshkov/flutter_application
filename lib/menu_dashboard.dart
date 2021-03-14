@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'my_flutter_app_icons.dart';
 
 final Color backgroudnColor = Color(0xFF4A4A58);
 bool isMenuClosed = true;
@@ -37,6 +38,10 @@ class _MenuDashBoardState extends State<MenuDashBoard> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            Icon(
+              MyFlutterApp.star_3,
+              size: 24,
+            ),
             Text(
               "Inbox",
               style: TextStyle(color: Colors.white, fontSize: 20),
