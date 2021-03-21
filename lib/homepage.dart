@@ -20,6 +20,13 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Music',
+          style: TextStyle(color: Colors.black),
+        ),
+        elevation: 0,
+      ),
       //appbar - false;
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
